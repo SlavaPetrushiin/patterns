@@ -1,0 +1,19 @@
+{
+  "name": "patterns",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+
+  "scripts": {
+    "watch": "tsc -w",
+    "dev": "yarn nodemon dist/index.js"
+  },
+  "author": "sl",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.11.17",
+    "node": "^19.3.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1"
+  }
+}
