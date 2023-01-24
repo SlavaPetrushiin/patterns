@@ -11,4 +11,8 @@ export class StereoSetCDComand implements IComand {
     execute() {
         this.stereo.setCd();
     }
+
+    undo() {
+        this.stereo.off();
+    }
 }

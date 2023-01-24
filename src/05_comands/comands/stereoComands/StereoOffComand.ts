@@ -11,4 +11,8 @@ export class StereoOffComand implements IComand {
     execute() {
         this.stereo.off();
     }
+
+    undo() {
+        this.stereo.on();
+    }
 }

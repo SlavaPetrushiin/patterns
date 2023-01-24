@@ -11,4 +11,8 @@ export class StereoSetVolumeComand implements IComand {
     execute() {
         this.stereo.setVolume();
     }
+
+    undo() {
+        this.stereo.off();
+    }
 }

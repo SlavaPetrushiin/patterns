@@ -11,4 +11,8 @@ export class GarageDoorOpenCommand implements IComand {
     execute() {
         this.garage.up();
     }
+
+    undo() {
+        this.garage.down();
+    }
 }

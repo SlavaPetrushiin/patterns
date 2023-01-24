@@ -1,7 +1,4 @@
-import { Stereo } from './actions/Stereo';
-import { GarageDoor } from './actions/GarageDoor';
-import { CeilingFan } from './actions/CeilingFan';
-import { Light } from './actions/Light';
+import { NoComand } from './comands/NoComand';
 import { IComand } from "./comands/types";
 
 export class SimpleRemoteControl {
@@ -23,6 +20,11 @@ export class SimpleRemoteControl {
 export class RemoteControl {
     onComands: IComand[] = [];
     offComands: IComand[] = [];
+    undoComand: IComand;
+
+    constructor() {
+        this.undoComand = new NoComand();
+    }
 
     public setComand(slot: number, onComand: IComand, offComand: IComand) {
         this.onComands[slot] = onComand;
@@ -31,10 +33,16 @@ export class RemoteControl {
 
     public onButtonWasPushed(slot: number) {
         this.onComands[slot].execute();
+        this.undoComand = this.onComands[slot];
     }
 
     public offButtonWasPushed(slot: number) {
         this.offComands[slot].execute();
+        this.undoComand = this.offComands[slot];
+    }
+
+    public undoButtonWasPushed() {
+        this.undoComand.undo();
     }
 
 }

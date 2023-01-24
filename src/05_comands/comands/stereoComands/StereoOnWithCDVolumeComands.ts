@@ -13,4 +13,8 @@ export class StereoOnWithCDVolumeComands implements IComand {
         this.stereo.setCd();
         this.stereo.setVolume();
     }
+
+    undo() {
+        this.stereo.off();
+    }
 }

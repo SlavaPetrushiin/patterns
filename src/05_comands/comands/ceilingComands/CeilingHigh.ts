@@ -1,15 +1,13 @@
 import { CeilingFan } from '../../actions/CeilingFan';
-import { IComand } from './../types';
+import { AbstractCeilingComand } from './AbstractCeilingComand';
 
-
-export class CeilingHighComand implements IComand {
-    ceiling: CeilingFan;
-
+export class CeilingHighComand extends AbstractCeilingComand {
     constructor(object: CeilingFan) {
-        this.ceiling = object;
+        super(object);
     }
 
     execute() {
+        this.prevSpeed = this.ceiling.getSpeed(); //получить скороть перед тем как её переключить
         this.ceiling.high();
     }
 }

@@ -11,4 +11,8 @@ export class LightOffCommand implements IComand {
     execute() {
         this.light.off();
     }
+
+    undo() {
+        this.light.on();
+    }
 }
