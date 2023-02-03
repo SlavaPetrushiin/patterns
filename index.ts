@@ -1,16 +1,20 @@
+import { ADAPTER } from './src/07_adapter/index';
 import { OBSERVER } from './src/02_observer/index';
 import { STRATEGY } from "./src/01-strategy/index";
 import { DECARATOR } from './src/03_decarator';
 import { SIMPLE_FACTORY } from './src/04_1_simple_factory/index';
 import { HARD_FACTORY } from './src/04_2_hard_factory';
 import { COMAND } from './src/05_comands';
+import { TEMPLATE_METHOD } from './src/08_template_method';
 
 //STRATEGY();
 //OBSERVER();
 //DECARATOR();
 //SIMPLE_FACTORY();
 //HARD_FACTORY();
-COMAND()
+//COMAND()
+//ADAPTER()
+TEMPLATE_METHOD()
 
 // (async () => {
 //     class Users {
