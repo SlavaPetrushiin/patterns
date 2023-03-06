@@ -1,3 +1,6 @@
+import { STATE_PATTERN } from './src/10_1_state-bad/index';
+import { ITERATOR_2 } from './src/09_2_iterator/index';
+import { ITERATOR } from './src/09_1_iterator/index';
 import { ADAPTER } from './src/07_adapter/index';
 import { OBSERVER } from './src/02_observer/index';
 import { STRATEGY } from "./src/01-strategy/index";
@@ -14,7 +17,10 @@ import { TEMPLATE_METHOD } from './src/08_template_method';
 //HARD_FACTORY();
 //COMAND()
 //ADAPTER()
-TEMPLATE_METHOD()
+//TEMPLATE_METHOD()
+//ITERATOR()
+//ITERATOR_2();
+STATE_PATTERN()
 
 // (async () => {
 //     class Users {
